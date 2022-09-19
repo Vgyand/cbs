@@ -1,0 +1,96 @@
+.grid_profile 
+    display: grid
+    grid-template-columns: 0.28fr 1fr
+    margin-top: 40px 
+    grid-gap: 40px
+    
+    .profil_nav
+        display: grid
+        grid-template-rows: 1fr 1fr 
+        justify-items: center
+        grid-gap: 80px
+        height: 400px
+        padding-top: 26px 
+        background: rgba(120,120 ,120 ,0.17 )
+        +size-color-font(15px, black,Rubik)
+        
+        .profil_nav_text
+            padding-top: 16px 
+        a 
+            text-decoration: none
+            color: $textb
+            &:hover
+                color: $hover_red
+                transition: 0.3s
+    .profil_customization_fhoto1
+        // background: rgba(120,120 ,120 ,0.8 )
+        display: flex
+        justify-content: center
+    .profil_customization_grid1
+        display: grid
+        grid-template-rows:  0.1fr 1fr
+        height: 610px
+        grid-gap: 0px 
+        
+        .profil_customization1
+            // background: rgba(120,120 ,120 ,0.8 )
+            display: grid
+            grid-template-columns: 0.34fr 1fr
+            height: 170px
+            .profil_customization_name1
+                display: grid
+                grid-template-rows: 1fr 0.1fr
+                // background: rgba(120,120 ,120 ,0.1 )
+                padding-top: 10px 
+                line-height: 0.01
+                a    p
+                    font-size: 14px
+                    color: rgba(120,120 ,120 ,1 )
+                    &:hover
+                        color: $hover_red
+                        transition: 0.7s;
+                a
+                    text-decoration: none
+        .profil_customization_redac1
+            display: grid
+            grid-template-rows: 1fr 1fr 1fr 1fr
+            grid-template-columns: 0.30fr 1fr
+            padding-top: 50px
+            padding-left: 50px
+            grid-gap: 0px
+            .otmena_form
+                margin-top: 70px
+                background: $hover_red
+                width: 160px
+                height: 33px
+                padding-left: 55px
+                padding-top: 5px 
+                color: $text
+                
+                +size-color-font(16px, $text,$fftitle)
+            a
+                text-decoration: none        
+            .profil_customization_redac_grid1
+                display: grid
+                width: 200px
+                
+                .input_form
+                    width: 300px
+                    margin-top: 20px
+                .and
+                    height: 80px
+                    padding-bottom: 48px
+                .profil_customization_button
+                    margin-top: 20px 
+                    background: $hover_red
+                    +size-color-font(17px, $text,$fftitle)
+                    width: 300px
+                    height: 33px
+                    border: none
+            .text-name1
+                margin-top: 26px
+                +size-color-font(18px, black,$fftitle)
+                .text-name-name1
+                    +size-color-font(16px, black,$fftitle)
+                    font-weight: bold
+                    

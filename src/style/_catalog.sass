@@ -1,0 +1,161 @@
+* 
+    box-sizing: border-box
+*:before,
+*:after 
+    box-sizing: border-box
+a 
+    transition: all 0.2s linear
+
+.popular__wrap
+    display: grid
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr
+.popular
+    background-color: $bgmain
+    height: 400px
+    color: $text
+    text-align: center
+.catalog__card
+    .catalog__card-name
+        width: 190px
+        font-family: Rubik
+        font-size: 13px
+        font-weight: 500
+    a
+        font-family: Rubik
+        font-size: 17px
+        font-weight: 500
+        color: $text
+        span
+            margin-left: 10px
+    a:hover
+        text-decoration: none
+        color: $hover_orange
+.title__content__catalog
+    display: flex
+    justify-content: space-between
+    .left__title
+        font-family: Rubik
+        font-size: 100px
+        font-weight: 900
+        color: #EDBDA1
+        margin-top: -39px
+    .right__title 
+        font-family: Rubik
+        font-size: 35px
+        font-weight: 700
+        margin-top: 25px
+.categories__catalog
+    display: flex
+    position: relative
+    .categories__title
+        font-family: Roboto
+        font-size: 18px
+        font-weight: 500
+    .arrow__img
+        margin-left: 15px
+        margin-top: 7px
+        width: 18px
+        height: 11px
+    .catalog__menu
+        position: absolute
+        display: none
+        z-index: 10
+        background-color: #E1E1E1
+        margin-top: 40px
+        width: 338px
+        height: 500px
+        font-family: Roboto
+        font-size: 15px
+        font-weight: 400
+        a   
+            text-decoration: none
+            color: #000000
+            li
+                list-style: none
+                margin-bottom: 20px
+                &:first-child
+                    margin-top: 15px
+        .line
+            border: 1px solid #C3C3C3
+            margin-bottom: 20px
+            width: 238px          
+.categories__catalog__sob:hover > .catalog__menu
+    display: block
+    transition: 0.2s
+.catalog__books
+    margin-top: 37px
+    display: grid
+    grid-template-columns: repeat(6, 1fr)
+    grid-gap: 30px
+    margin-bottom: 120px
+    .card__book
+        display: flex
+        flex-direction: column
+        .book__card-name
+            height: 45px
+            font-family: Rubik
+            font-size: 14px
+            font-weight: 500
+            text-align: center
+        .book__card-author
+            margin-top: -15px
+            font-family: Rubik
+            font-size: 13px
+            font-weight: 400
+            text-align: center
+        .book__card-starrate
+            display: flex
+            justify-content: flex-start
+            margin-left: 20px
+            padding-bottom: 14px
+            img
+                margin-right: 8px
+        a
+            font-family: Rubik
+            font-size: 17px
+            font-weight: 500
+            color: $textb
+            span
+                margin-left: 10px
+        a:hover
+            text-decoration: none
+            color: $hover_orange
+.pages 
+    margin-bottom: 120px
+    display: flex
+    .more_20 
+        color: #FFFFFF
+        padding: 15px 40px
+        font-family: Rubik
+        font-size: 21px
+        font-weight: 500
+        background-color: #C90B0B
+        border: 1px solid #C90B0B
+        &:hover
+            text-decoration: none
+    .border__page
+        padding: 20px
+        border: 2px solid #C90B0B
+    .border__page_use
+        font-family: Rubik
+        font-size: 21px
+        font-weight: 500
+        padding: 15px 22px
+        border: 2px solid #C90B0B
+        background-color: #C90B0B
+        color: #FFFFFF
+    .border__page_2
+        font-family: Rubik
+        font-size: 21px
+        font-weight: 500
+        padding: 15px 22px
+        border: 2px solid #C90B0B
+        color:#C90B0B
+    .border__page_2
+        font-family: Rubik
+        font-size: 21px
+        font-weight: 500
+        padding: 15px 19px
+        border: 2px solid #C90B0B
+        color:#C90B0B
+

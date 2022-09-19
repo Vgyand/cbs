@@ -1,0 +1,146 @@
+mixin scripts(scripts)
+    each name in scripts
+        - src = 'js/' + name;
+        script(src=src)
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title ЦБС Ленинского района
+        //fonts
+        include blocks/link
+        // end fonts
+        
+    body
+        .wrapper
+            //header
+            include blocks/header
+            //end header
+            //banner
+            section.banner
+                .container
+                    p.banner__title Бибилиотеки <br> <span>Ленинского района</span>
+                    p.banner__form-title    Найти книгу <br><a href="#"><span>В КАТАЛОГЕ</span></a>
+                    form(action="#" method="post")
+                        input.banner__form-input(type="text" placeholder="Расширенный поиск...")
+                        <a href="#">
+                            img.banner__form-search(src="images/mainpage/banner/search.png", alt="alt")
+                        </a>
+                        button.btn.btn-primary.banner__form-btn(type='submit')
+                    img.banner__sofa(src="images/mainpage/banner/divan.png", alt="")
+                    img.banner__arrow(src="images/mainpage/banner/arrow.png", alt="")
+            //end banner
+            //instruments
+            section.instruments
+                .container.instruments__grid
+                    a.instruments__wrap(href="#")
+                        img.instruments__img(src="images/mainpage/instruments/inst1.png", alt="")
+                        .instruments__text
+                            p.instuments__text-title Периодические издания
+                            .instuments__text-img
+                                img(src="images/mainpage/instruments/arrow.png", alt="alt")
+                    a.instruments__wrap(href="#")
+                        img.instruments__img(src="images/mainpage/instruments/inst2.png", alt="")
+                        .instruments__text
+                            p.instuments__text-title Электронный каталог
+                            .instuments__text-img
+                                img(src="images/mainpage/instruments/arrow.png", alt="alt")
+                    a.instruments__wrap(href="#")
+                        img.instruments__img(src="images/mainpage/instruments/inst3.png", alt="")
+                        .instruments__text
+                            p.instuments__text-title Клубы по интересам
+                            .instuments__text-img
+                                img(src="images/mainpage/instruments/arrow.png", alt="alt")
+                    a.instruments__wrap(href="#")
+                        img.instruments__img(src="images/mainpage/instruments/inst4.png", alt="")
+                        .instruments__text
+                            p.instuments__text-title Молодежный совет "НИКА"
+                            .instuments__text-img
+                                img(src="images/mainpage/instruments/arrow.png", alt="alt")
+            //end instruments
+
+            //new
+            section.new
+                .container.new__wrap
+                    h2.new__title Книжные новинки
+                    .new__greybox
+                    .new__content
+                        img.new__content-img(src="images/mainpage/new/new-item1.png", alt="alt")
+                        .new__content-text
+                            h3.new__content-text-title  Пропавшие девушки Парижа<br> П. Дженофф , 2020 г.
+                            p.new__content-text-maintext <br> 1946 ,Манхэттен. <br><br>Грейс Хили пережила Вторую мировую войну, потеряв любимого человека. Она надеялась, что тень прошлого больше никогда ее не потревожит. Однако все меняется, когда по пути на работу девушка находит спрятанный под скамейкой чемодан. Не в силах противостоять своему любопытству, она обнаруживает дюжину фотографий, на которых запечатлены молодые девушки...
+                    .new__bookcard
+                        .new-bookcard-item
+                            a(href="")
+                                img(src="images/mainpage/new/new-item2.png", alt="")
+                                h5 Lorem <br> ipsum
+                        .new-bookcard-item
+                            a(href="")
+                                img(src="images/mainpage/new/new-item3.png", alt="")
+                                h5 Lorem <br> ipsum
+                        .new-bookcard-item
+                            a(href="")
+                                img(src="images/mainpage/new/new-item4.png", alt="")
+                                h5 Lorem <br> ipsum
+                        .new-bookcard-item
+                            a(href="")
+                                img(src="images/mainpage/new/new-item5.png", alt="")
+                                h5 Lorem <br> ipsum
+                        .new-bookcard-item
+                            a(href="")
+                                img(src="images/mainpage/new/new-item11.png", alt="")
+                                h5 Lorem <br> ipsum
+                        .new-bookcard-item
+                            a(href="")
+                                img(src="images/mainpage/new/new-item7.png", alt="")
+                                h5 Lorem <br> ipsum
+                        .new-bookcard-item
+                            a(href="")
+                                img(src="images/mainpage/new/new-item6.png", alt="")
+                                h5 Lorem <br> ipsum
+                        .new-bookcard-item
+                            img(src="images/mainpage/new/new-item6.png", alt="")
+                            h5 Lorem <br> ipsum
+            //end new
+            
+            //news
+            section.news
+                .container.news__wrap
+                    .news__item
+                        img.news__item-img(src="images/mainpage/news/news1.png", alt="alt")
+                        p.news__item-date 10 ноября
+                        p.news__item-text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                    .news__item
+                        img.news__item-img(src="images/mainpage/news/news2.png", alt="alt")
+                        p.news__item-date 10 ноября
+                        p.news__item-text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                    .news__title
+                        p.news__title-item1.news__title НОВОСТИ
+                        p.news__title-item2.news__title НОВОСТИ
+                        p.news__title-item3.news__title НОВОСТИ
+                    .news__item.news__third
+                        img.news__item-img(src="images/mainpage/news/news3.png", alt="alt")
+                        .news__third-item
+                            p.news__item-date 10 ноября
+                            p.news__item-text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+            //end news
+
+            //excursions
+            section.excursions
+                .container
+                    .excursions__title
+                        h2.excursions__title-text Экскурсии
+                        img.excursions__title-img(src="images/mainpage/excursions/line.png", alt="")
+                    .excursions__banner
+                        img.excursions__banner-img(src="images/mainpage/excursions/Home.png", alt="")
+                        .excursions__banner-text
+                            h3 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                            p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in 
+            //end excursions
+
+            //footer
+            include blocks/footer
+            //end footer
+        //scripts
+        +scripts(['jquery.min.js', 'owl.carousel.min.js' , 'main.js'])

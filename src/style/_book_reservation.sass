@@ -1,0 +1,137 @@
+.grid_profile 
+    display: grid
+    grid-template-columns: 0.28fr 1fr
+    margin-top: 40px 
+    grid-gap: 40px
+    
+    .profil_nav
+        display: grid
+        grid-template-rows: 1fr 1fr 
+        justify-items: center
+        grid-gap: 80px
+        height: 400px
+        padding-top: 26px 
+        background: rgba(120,120 ,120 ,0.17 )
+        +size-color-font(15px, black,Rubik)
+        
+        .profil_nav_text
+            padding-top: 16px 
+        a 
+            text-decoration: none
+            color: $textb
+            &:hover
+                color: $hover_red
+                transition: 0.3s;
+    .profil_customization_fhoto
+        // background: rgba(120,120 ,120 ,0.8 )
+        display: flex
+        justify-content: center
+    .profil_customization_grid 
+        display: grid
+        grid-template-rows:  0.3fr 1fr
+        grid-gap: 0px 
+        .profil_customization
+            // background: rgba(120,120 ,120 ,0.8 )
+            display: grid
+            grid-template-columns: 0.34fr 1fr
+            
+            .profil_customization_name
+                display: grid
+                grid-template-rows: 1fr 0.1fr
+                // background: rgba(120,120 ,120 ,0.1 )
+                padding-top: 10px 
+                line-height: 0.01
+                a    p
+                    font-size: 14px
+                    color: rgba(120,120 ,120 ,1 )
+                    &:hover
+                        color: $hover_red
+                        transition: 0.7s;
+                a
+                    text-decoration: none
+        .profil_customization_redac
+            grid-template-rows: 1fr 1fr 1fr 1fr
+            padding-top: 50px
+            padding-left: 50px
+            .text-name
+                display: grid
+                grid-template-columns: 1fr 1fr
+                width: 60%
+                +size-color-font(18px, black,$fftitle)
+                .text-name-name 
+                    +size-color-font(16px, black,$fftitle)
+                    font-weight: bold
+.favorite_genres 
+    margin-top: 20px    
+    display: grid
+    grid-template-columns: 0.4fr 1fr
+    .favorite_genres_js
+        border-bottom: solid 0.7px  rgba(0,0 ,0 ,0.3 )
+        line-height: 0.5
+        // position: relative
+        p
+            font-weight: bold
+            +size-color-font(22px, black,$fftitle)
+        .favorite_genres_janr
+            display: grid
+            grid-template-columns: 0.11fr 1fr
+            
+            height: 26px
+            .text-janr
+                font-weight: normal
+                background: rgba(120,120 ,120 ,0.6 )
+                // display: inline-block
+                width: 106px
+                padding: 7px
+                border-radius: 20px
+                
+                
+                +size-color-font(14px, black,$fftitle)
+                .favorite_genres_js_x
+                    position: relative
+                    left: 30px
+                    padding-left: 3.4px 
+                    padding-right: 3.2px 
+                    border-radius: 50%
+                    background: #bd0404
+                    color: $text
+                    
+.read_books
+    display: grid
+    grid-template-rows: 0.1fr 1fr
+    grid-gap: 40px
+    margin-top: 50px
+    margin-bottom: 50px
+    .read_books_text
+        height: 40px
+    h3
+        +size-color-font(25px, black,$fftitle)
+    p
+        +size-color-font(14px, rgba(120,120 ,120 ,0.6 ),$fftitle)
+    .read_books_nomer
+        display: grid
+        grid-template-columns: 1fr 1fr
+        grid-template-rows: 1fr 1fr
+        grid-gap: 40px
+        
+        
+        
+        .read_books_nomer1
+            display: grid
+            grid-template-columns: 0.35fr 1fr
+            background: rgba(120,120 ,120 ,0.14 )
+            padding: 23px
+            grid-gap: 20px
+            width: 440px
+            height: 280px
+            .margin-text-read
+                padding-top: 39px 
+            .read-text-sarch 
+                +size-color-font(14px, rgba(0,0 ,0 ,0.8 ),$fftitle)
+            .read_books_nomer_map
+                position: relative
+                left: 225px
+                bottom: 10px
+                +size-color-font(15px, red,$fftitle)
+            a
+                text-decoration: none

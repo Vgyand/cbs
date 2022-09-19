@@ -1,0 +1,63 @@
+mixin scripts(scripts)
+    each name in scripts
+        - src = 'js/' + name;
+        script(src=src)
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Контакты
+        //fonts
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@900&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@700&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=Comfortaa&family=Rubik:wght@400;900&display=swap" rel="stylesheet"> 
+        //css
+        link(rel="stylesheet", href="./css/styles.min.css")
+    body
+        .wrapper
+            //header
+            include blocks/header
+            //end header
+            section.banner.bannerticket
+                .container.banner-wrap
+                    h1.banner_title Контакты
+                    .banner__form
+                        h2.banner__form-title Найти книгу
+                        a.banner__form-nav(href="#") В КАТАЛОГЕ
+                        form(action="#" method="post")
+                        input.banner__form-input(type="text" placeholder="Расширенный поиск...")
+                        <a href="#">
+                            img.banner__form-search(src="images/mainpage/banner/search.png", alt="alt")
+                        </a>
+                        button.btn.btn-primary.banner__form-btn(type='submit')
+            section.contacts
+                .container
+                    .contacts__wrap
+                        h3 Мы всегда готовы выслушать новые предложения и пожелания по работе библиотеки
+                        p.contacts__title-item Связаться с нами можно любым удобным способом.<br>Пишите в онлайн консультант,  на почту, в соц сети или звоните
+                        .contacts__content
+                            .contacts__content-info
+                                p.contacts__content-info-phone +7(831) 245 - 31 - 84
+                                p.contacts__content-info-text Почта: bibliotekaf@yandex.ru<br>Адрес:  Нижний Новгород, пр. Ленина, 14
+                                .contacts__icons
+                                    p Мы в соц сетях
+                                    a(href="#") 
+                                        img(src="images/contacts/fb.png", alt="alt")
+                                    a(href="#")
+                                        img(src="images/contacts/twit.png", alt="alt")
+                                    a(href="#")
+                                        img(src="images/contacts/vk.png", alt="alt")
+                            .contacts__content-input
+                                form(action="#" method="POST")
+                                    input.contasts__content-input-item(type="text" placeholder="Введите имя")
+                                    input.contasts__content-input-item(type="text" placeholder="Введите номер телефона")
+                                    textarea.contasts__content-input-item.contacts__message(name="text" cols="40" rows="5" placeholder="Ваше сообщение")
+                                    button.btn.btn-primary.btn__contacts(type='submit') Отправить
+                <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A8f192b7df3cbf518e2889a3b732c10a1c7da0db548f81f5413d5372294d0d969&amp;width=100%25&amp;height=430&amp;lang=ru_RU&amp;scroll=true"></script>
+            //footer   
+            include blocks/footer
+            //end footer

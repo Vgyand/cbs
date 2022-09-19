@@ -1,0 +1,104 @@
+mixin scripts(scripts)
+    each name in scripts
+        - src = 'js/' + name;
+        script(src=src)
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Клубы по интересам
+        //fonts
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@900&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@700&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=Comfortaa&family=Rubik:wght@400;900&display=swap" rel="stylesheet"> 
+        //css
+        link(rel="stylesheet", href="./css/styles.min.css")
+    body
+        .wrapper
+            //header
+            include blocks/header
+            //end header
+            section.banner.bannerticket
+                .container.banner-wrap
+                    h1.banner_title Клубы по интересам
+                    .banner__form
+                        h2.banner__form-title Найти книгу
+                        a.banner__form-nav(href="#") В КАТАЛОГЕ
+                        form(action="#" method="post")
+                        input.banner__form-input(type="text" placeholder="Расширенный поиск...")
+                        <a href="#">
+                            img.banner__form-search(src="images/mainpage/banner/search.png", alt="alt")
+                        </a>
+                        button.btn.btn-primary.banner__form-btn(type='submit')
+            //club
+            section.club
+                .container
+                    .club__title
+                        .club__title-text
+                            h2 Клубы по интересам<br>
+                            p Библиотеки района не только обеспечивают читателей нужной информацией, но ещё являются центрами досуга для населения.<br><br><br>На базе библиотек МКУК ЦБС Ленинского района организовано 37 клубов по интересам, объединяющих людей разных поколений и работающих для различных категорий читателей.<br><br><br>Ветераны, инвалиды и люди пожилого возраста приглашаются на мероприятия в рамках районной комплексной целевой программы по работе с социально — незащищёнными слоями населения «Передай добро по кругу». Библиотечные работники, учитывая потребности и интересы читателей, проводят встречи с интересными людьми, вечера воспоминаний, поэтические вечера, конкурсные программы…
+                        .club__title-img
+                            img.club__title-img1(src="images/club/item1.png", alt="alt")
+                            img.club__title-img2(src="images/club/item2.png", alt="alt")
+                    .club__old
+                        img.club__old-line(src="images/club/line1.png", alt="alt")
+                        .club__old-img
+                            img.club__old-img-item(src="images/club/item3.png", alt="")
+                            img.club__old-img-item(src="images/club/item4.png", alt="")
+                            img.club__old-img-item(src="images/club/item5.png", alt="")
+                            img.club__old-img-item(src="images/club/item6.png", alt="")
+                            img.club__old-img-item(src="images/club/item7.png", alt="")
+                        .club__old-text
+                            .club__old-text1
+                                h2 Взрослые библиотеки
+                                h3.club__old-text11 ЦРБ им. Д. А. Фурманова
+                                p «Литературный огонёк»<br>«В мире прекрасного»<br>«Школьные годы»<br>«Клуб молодого избирателя»<br>«Литературно – музыкальная гостиная «Светёлка»<br>«Профессиональный клуб «Вдохновение»<br>«Библиотечный университет»<br>Молодежное библиотечное объединение «НИКА»<br>«Карамелька»
+                            .club__old-text2
+                                h3 Библиотека им. А. А. Ахматовой
+                                p «Собеседник»<br>«Орфей»<br>«Школьные годы»<br>«Клуб по лепке и моделированию» годы»
+                            .club__old-text3
+                                h3 Библиотека им. А. А. Блока
+                                p «Берегиня»<br>«Оптимист»
+                            .club__old-text4
+                                h3 Библиотека им. П. П. Бажова
+                                p «Золотой возраст»<br>«Краевед»
+                            .club__old-text5
+                                h3 Библиотека им. Декабристов 
+                                p «Зелёная лампа»<br>«Ключ»
+                            .club__old-text6
+                                h3 Библиотека им. Ф. Э. Дзержинского
+                                p «Возраст жизненной мудрости»<br>«Позитив плюс»<br>«Современница»
+                            .club__old-text7
+                                h3 БИДЦ им. К. Г. Паустовского
+                                p «Серебряная нить»<br>«Литературная гостиная»<br>Клуб прикладного творчества «Фантазия»<br>Клуб театрального мастерства «Начало»<br>Клуб изобразительного творчества «Волшебная кисточка»
+                    .club__kid
+                        .club__kid-text
+                            .club__kid-text1
+                                h2 Детские библиотеки
+                                h3 ЦРДБ им. А. В. Кольцова
+                                p Театр книги «Золотой ключик»<br>«Луч и К»<br>«Кудесники»<br>«Палитра»
+                            .club__kid-text2
+                                h3 Библиотека им. В. Комарова
+                                p «Юный краевед»<br>«Юный друг природы»
+                            .club__kid-text3
+                                h3 Библиотека им. М. М. Пришвина
+                                p Кружок бисероплетения «Волшебная бусинка»<br>Кружок по лепки из соленого теста «Пластика»<br>Школа нетрадиционного рисования «Цветик – семицветик»
+                            .club__kid-text4
+                                h3 Библиотека им. С. Я. Маршака
+                                p «Росток»<br>Театральная студия «Жемчужина»
+                            .club__kit-text5
+                                h3 Библиотека им. Н. А. Некрасова
+                                p «Вместе с кисточкой и красками путешествуем по сказкам»<br>«Кладовая радости»
+                        .club__kid-img
+                            img.club__kid-img-item(src="images/club/item3.png", alt="")
+                            img.club__kid-img-item(src="images/club/item4.png", alt="")
+                            img.club__kid-img-item(src="images/club/item5.png", alt="")
+                        img.club__kid-line(src="images/club/line1.png", alt="alt")
+            //club end
+            //footer   
+            include blocks/footer
+            //end footer

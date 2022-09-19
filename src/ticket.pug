@@ -1,0 +1,68 @@
+mixin scripts(scripts)
+    each name in scripts
+        - src = 'js/' + name;
+        script(src=src)
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Оформление читательского билета
+        //fonts
+        include blocks/link
+        // end fonts
+    body
+        .wrapper
+            //header
+            include blocks/header
+            //end header
+            //banner
+            section.banner.bannerticket
+                .container.banner-wrap
+                    h1.banner_title Оформление <br> читательского билета
+                    .banner__form
+                        h2.banner__form-title Найти книгу
+                        a.banner__form-nav(href="#") В КАТАЛОГЕ
+                        form(action="#" method="post")
+                        input.banner__form-input(type="text" placeholder="Расширенный поиск...")
+                        <a href="#">
+                            img.banner__form-search(src="images/mainpage/banner/search.png", alt="alt")
+                        </a>
+                        button.btn.btn-primary.banner__form-btn(type='submit')
+            //banner end
+            //ticket__title
+            section.ticket__title
+                .container
+                    .ticket__title-item.ticket__title-item1
+                        h2  Читательский билет
+                    .ticket__title-item.ticket__title-item2
+                        h2 Где записаться
+                    .ticket__title-item.ticket__title-item3
+                        h2 Какие нужны документы
+            //ticket__title end
+            //ticket__content
+            section.ticket__content
+                .container.ticket__wrap
+                    .ticket__content-item.ticket__content-item1
+                        h2 Какие нужны документы для граждан РФ: паспорт РФ;
+                        p для граждан других стран: паспорт с визой (при отсутствии визы в паспорте обязательно предоставляется перевод на русский язык фамилии и имени) <br> для кандидатов и докторов наук: паспорт и диплом о присуждении ученой степени.
+                    .ticket__content-item.ticket__content-item2
+                        h2 Как записаться читателем
+                        p Читателем библиотеки может стать каждый гражданин Российской Федерации или другого государства с 14 лет.
+                    .ticket__content-item.ticket__content-item3
+                        h2 Читательский билет
+                        p При записи вы получите пластиковый читательский билет с фотографией. Его выдают бесплатно.В случае утери читательского билета вы можете заказать дубликат. Стоимость дубликата — 100 рублей. <br> Читательский билет даёт право только личного пользования библиотекой, передавать его другому лицу нельзя.
+                        img(src="images/mainpage/excursions/line.png", alt="alt")
+                    .ticket__content-item.ticket__content-item4
+                        h2 Где записаться
+                        h4 Главное здание: ЦБ им. Д. А. Фурманова
+                        p Адрес: пр. Ленина, 14<br>Телефон: 245 - 31 - 84<br>График работы:<br>пн - пт с 11:00 до 19:00,<br>вс с  11:00 до 19:00 <br>
+                        h4 Филиал им. М. М. Пришвина
+                        p Адрес: ул. Гл. Успенского, 17<br>Телефон: 258 – 10 – 60<br>График работы:<br>пн - пт с 11:00 до 19:00,<br>вс с  11:00 до 19:00 <br>
+                        h4 Краеведческий центр им. П. П. Бажова
+                        p Адрес: ул. Кировская, 16<br>Телефон: 244 – 16 – 05<br>График работы:<br>пн - пт с 11:00 до 19:00,<br>вс с  11:00 до 19:00 <br>
+            //ticket__content end
+
+            //footer
+            include blocks/footer
+            //end footer

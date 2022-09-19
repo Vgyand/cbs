@@ -1,0 +1,468 @@
+mixin scripts(scripts)
+    each name in scripts
+        - src = 'js/' + name;
+        script(src=src)
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Клубы по интересам
+        //fonts
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@900&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@700&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=Comfortaa&family=Rubik:wght@400;900&display=swap" rel="stylesheet"> 
+        //css
+        link(rel="stylesheet", href="./css/styles.min.css")
+    body
+        .wrapper
+            //header
+            include blocks/header
+            //end header
+            section.banner.bannerticket
+                .container.banner-wrap
+                    h1.banner_title Популярное
+                    .banner__form
+                        h2.banner__form-title Найти книгу
+                        a.banner__form-nav(href="#") В КАТАЛОГЕ
+                        form(action="#" method="post")
+                        input.banner__form-input(type="text" placeholder="Расширенный поиск...")
+                        <a href="#">
+                            img.banner__form-search(src="images/mainpage/banner/search.png", alt="alt")
+                        </a>
+                        button.btn.btn-primary.banner__form-btn(type='submit')
+            section.popular
+                .container.popular__wrap
+                    .catalog__card
+                        img.catalog__card-img(src="images/catalog/secrets_of_space_exploration.png", alt="alt")
+                        p.catalog__card-name Тайны космонавтики<br>Прокопенко И. С.
+                        .catalog__card-starrate
+                            img(src="images/catalog/Star 3.png", alt="alt")
+                            img(src="images/catalog/Star 3.png", alt="alt")
+                            img(src="images/catalog/Star 3.png", alt="alt")
+                            img(src="images/catalog/Star 4.png", alt="alt")
+                            img(src="images/catalog/Star 4.png", alt="alt")
+                        a(href="#")
+                            img(src="images/catalog/Vectorw.png", alt="alt")
+                            span Забронировать
+                    .catalog__card
+                        img.catalog__card-img(src="images/catalog/Formatsovs_conspiracy.png", alt="alt")
+                        p.catalog__card-name Заговор фармацевтов<br>Прокопенко И. С.
+                        .catalog__card-starrate
+                            img(src="images/catalog/Star 3.png", alt="alt")
+                            img(src="images/catalog/Star 3.png", alt="alt")
+                            img(src="images/catalog/Star 3.png", alt="alt")
+                            img(src="images/catalog/Star 4.png", alt="alt")
+                            img(src="images/catalog/Star 4.png", alt="alt")
+                        a(href="#")
+                            img(src="images/catalog/Vectorw.png", alt="alt")
+                            span Забронировать
+                    .catalog__card
+                        img.catalog__card-img(src="images/catalog/how_to_get_rich_from_scratch.png", alt="alt")
+                        p.catalog__card-name Как разбогатеть с нуля<br>Трейси Б.
+                        .catalog__card-starrate
+                            img(src="images/catalog/Star 3.png", alt="alt")
+                            img(src="images/catalog/Star 3.png", alt="alt")
+                            img(src="images/catalog/Star 3.png", alt="alt")
+                            img(src="images/catalog/Star 4.png", alt="alt")
+                            img(src="images/catalog/Star 4.png", alt="alt")
+                        a(href="#")
+                            img(src="images/catalog/Vectorw.png", alt="alt")
+                            span Забронировать
+                    .catalog__card
+                        img.catalog__card-img(src="images/catalog/become_a_millionaire.png", alt="alt")
+                        p.catalog__card-name Хочу стать миллионером<br>Экер Харв Т.
+                        .catalog__card-starrate
+                            img(src="images/catalog/Star 3.png", alt="alt")
+                            img(src="images/catalog/Star 3.png", alt="alt")
+                            img(src="images/catalog/Star 3.png", alt="alt")
+                            img(src="images/catalog/Star 4.png", alt="alt")
+                            img(src="images/catalog/Star 4.png", alt="alt")
+                        a(href="#")
+                            img(src="images/catalog/Vectorw.png", alt="alt")
+                            span Забронировать
+                    .catalog__card
+                        img.catalog__card-img(src="images/catalog/military_secret.png", alt="alt")
+                        p.catalog__card-name Неизвестная Русь<br>Прокопенко И. С.
+                        .catalog__card-starrate
+                            img(src="images/catalog/Star 3.png", alt="alt")
+                            img(src="images/catalog/Star 3.png", alt="alt")
+                            img(src="images/catalog/Star 3.png", alt="alt")
+                            img(src="images/catalog/Star 4.png", alt="alt")
+                            img(src="images/catalog/Star 4.png", alt="alt")
+                        a(href="#")
+                            img(src="images/catalog/Vectorw.png", alt="alt")
+                            span Забронировать
+                    .catalog__card
+                        img.catalog__card-img(src="images/catalog/100ways_to_motivate.png", alt="alt")
+                        p.catalog__card-name 100 способов мотивации<br>Чандлер, Ричардсон
+                        .catalog__card-starrate
+                            img(src="images/catalog/Star 3.png", alt="alt")
+                            img(src="images/catalog/Star 3.png", alt="alt")
+                            img(src="images/catalog/Star 3.png", alt="alt")
+                            img(src="images/catalog/Star 4.png", alt="alt")
+                            img(src="images/catalog/Star 4.png", alt="alt")
+                        a(href="#")
+                            img(src="images/catalog/Vectorw.png", alt="alt")
+                            span Забронировать
+
+            section.content__catalog 
+                .container
+                    .title__content__catalog
+                        p.left__title КАТАЛОГ
+                        p.right__title ПОСЛЕДНИЕ ПОСТУПЛЕНИЯ
+                    .categories__catalog.categories__catalog__sob
+                        p.categories__title КАТЕГОРИИ
+                        a.catalog__arrow(href="#") 
+                            img.arrow__img(src="images/catalog/Arrow_bottom.jpg", alt="")
+                            ul.catalog__menu
+                                a(href="#")
+                                    li КНИГИ НА ИНОСТРАННЫХ ЯЗЫКАХ
+                                .line
+                                a(href="#")
+                                    li КНИГИ ДЛЯ ДЕТЕЙ
+                                .line
+                                a(href="#")
+                                    li КОМИКСЫ
+                                .line
+                                a(href="#")
+                                    li МОЛОДЕЖНАЯ ЛИТЕРАТУРА
+                                .line
+                                a(href="#")
+                                    li ХУДОЖЕСТВЕННАЯ ЛИТЕРАТУРА
+                                .line
+                                a(href="#")
+                                    li ПЕРИОДИЧЕСКИЕ ИЗДАНИЯ
+                                .line
+                                a(href="#")
+                                    li НЕХУДОЖЕСТВЕННАЯ ЛИТЕРАТУРА
+                                .line
+                                a(href="#")
+                                    li РЕЛИГИЯ
+                    .catalog__books
+                        .card__book
+                            img.card__book__img(src="images/catalog/stone girl.png", alt="alt")
+                            p.book__card-name Камень девушка вода
+                            p.book__card-author Ахмедова М.
+                            .book__card-starrate
+                                img(src="images/catalog/Star 3.png", alt="alt")
+                                img(src="images/catalog/Star 3.png", alt="alt")
+                                img(src="images/catalog/Star 3.png", alt="alt")
+                                img(src="images/catalog/Star 4.png", alt="alt")
+                                img(src="images/catalog/Star 4.png", alt="alt")
+                            a(href="#")
+                                img(src="images/catalog/Vector.png", alt="alt")
+                                span Забронировать
+                        .card__book
+                            img.card__book__img(src="images/catalog/Earth_gravity.png", alt="alt")
+                            p.book__card-name Земное притяжение
+                            p.book__card-author Устинова Т.
+                            .book__card-starrate
+                                img(src="images/catalog/Star 3.png", alt="alt")
+                                img(src="images/catalog/Star 3.png", alt="alt")
+                                img(src="images/catalog/Star 3.png", alt="alt")
+                                img(src="images/catalog/Star 4.png", alt="alt")
+                                img(src="images/catalog/Star 4.png", alt="alt")
+                            a(href="#")
+                                img(src="images/catalog/Vector.png", alt="alt")
+                                span Забронировать
+                        .card__book
+                            img.card__book__img(src="images/catalog/when_we_were_allies.png", alt="alt")
+                            p.book__card-name Когда мы были союзниками
+                            p.book__card-author Тополь Э.
+                            .book__card-starrate
+                                img(src="images/catalog/Star 3.png", alt="alt")
+                                img(src="images/catalog/Star 3.png", alt="alt")
+                                img(src="images/catalog/Star 3.png", alt="alt")
+                                img(src="images/catalog/Star 4.png", alt="alt")
+                                img(src="images/catalog/Star 4.png", alt="alt")
+                            a(href="#")
+                                img(src="images/catalog/Vector.png", alt="alt")
+                                span Забронировать
+                        .card__book
+                            img.card__book__img(src="images/catalog/say_what_you_will.png", alt="alt")
+                            p.book__card-name Скажи, что будешь помнить
+                            p.book__card-author Макгэрри К.
+                            .book__card-starrate
+                                img(src="images/catalog/Star 3.png", alt="alt")
+                                img(src="images/catalog/Star 3.png", alt="alt")
+                                img(src="images/catalog/Star 3.png", alt="alt")
+                                img(src="images/catalog/Star 4.png", alt="alt")
+                                img(src="images/catalog/Star 4.png", alt="alt")
+                            a(href="#")
+                                img(src="images/catalog/Vector.png", alt="alt")
+                                span Забронировать
+                        .card__book
+                            img.card__book__img(src="images/catalog/when_the_light_fades.png", alt="alt")
+                            p.book__card-name Когда меркнет свет
+                            p.book__card-author Уайт, Л.Э.
+                            .book__card-starrate
+                                img(src="images/catalog/Star 3.png", alt="alt")
+                                img(src="images/catalog/Star 3.png", alt="alt")
+                                img(src="images/catalog/Star 3.png", alt="alt")
+                                img(src="images/catalog/Star 4.png", alt="alt")
+                                img(src="images/catalog/Star 4.png", alt="alt")
+                            a(href="#")
+                                img(src="images/catalog/Vector.png", alt="alt")
+                                span Забронировать
+                        .card__book
+                            img.card__book__img(src="images/catalog/please_save_me.png", alt="alt")
+                            p.book__card-name Спаси меня,пожалуйста 
+                            p.book__card-author Бочарова, Т.А.
+                            .book__card-starrate
+                                img(src="images/catalog/Star 3.png", alt="alt")
+                                img(src="images/catalog/Star 3.png", alt="alt")
+                                img(src="images/catalog/Star 3.png", alt="alt")
+                                img(src="images/catalog/Star 4.png", alt="alt")
+                                img(src="images/catalog/Star 4.png", alt="alt")
+                            a(href="#")
+                                img(src="images/catalog/Vector.png", alt="alt")
+                                span Забронировать
+                        .card__book
+                            img.card__book__img(src="images/catalog/hippies.png", alt="alt")
+                            p.book__card-name Хиппи 
+                            p.book__card-author Коэльо П.
+                            .book__card-starrate
+                                img(src="images/catalog/Star 3.png", alt="alt")
+                                img(src="images/catalog/Star 3.png", alt="alt")
+                                img(src="images/catalog/Star 3.png", alt="alt")
+                                img(src="images/catalog/Star 4.png", alt="alt")
+                                img(src="images/catalog/Star 4.png", alt="alt")
+                            a(href="#")
+                                img(src="images/catalog/Vector.png", alt="alt")
+                                span Забронировать
+                        .card__book
+                            img.card__book__img(src="images/catalog/threshold.png", alt="alt")
+                            p.book__card-name Порог 
+                            p.book__card-author Лукьяненко С.
+                            .book__card-starrate
+                                img(src="images/catalog/Star 3.png", alt="alt")
+                                img(src="images/catalog/Star 3.png", alt="alt")
+                                img(src="images/catalog/Star 3.png", alt="alt")
+                                img(src="images/catalog/Star 4.png", alt="alt")
+                                img(src="images/catalog/Star 4.png", alt="alt")
+                            a(href="#")
+                                img(src="images/catalog/Vector.png", alt="alt")
+                                span Забронировать
+                        .card__book
+                            img.card__book__img(src="images/catalog/Brisbane.png", alt="alt")
+                            p.book__card-name Брисбен 
+                            p.book__card-author Водолазкин Е.
+                            .book__card-starrate
+                                img(src="images/catalog/Star 3.png", alt="alt")
+                                img(src="images/catalog/Star 3.png", alt="alt")
+                                img(src="images/catalog/Star 3.png", alt="alt")
+                                img(src="images/catalog/Star 4.png", alt="alt")
+                                img(src="images/catalog/Star 4.png", alt="alt")
+                            a(href="#")
+                                img(src="images/catalog/Vector.png", alt="alt")
+                                span Забронировать
+                        .card__book
+                            img.card__book__img(src="images/catalog/aviator.png", alt="alt")
+                            p.book__card-name Авиатор
+                            p.book__card-author Водолазкин Е.
+                            .book__card-starrate
+                                img(src="images/catalog/Star 3.png", alt="alt")
+                                img(src="images/catalog/Star 3.png", alt="alt")
+                                img(src="images/catalog/Star 3.png", alt="alt")
+                                img(src="images/catalog/Star 4.png", alt="alt")
+                                img(src="images/catalog/Star 4.png", alt="alt")
+                            a(href="#")
+                                img(src="images/catalog/Vector.png", alt="alt")
+                                span Забронировать
+                        .card__book
+                            img.card__book__img(src="images/catalog/knife.png", alt="alt")
+                            p.book__card-name Нож
+                            p.book__card-author Ю Несбё
+                            .book__card-starrate
+                                img(src="images/catalog/Star 3.png", alt="alt")
+                                img(src="images/catalog/Star 3.png", alt="alt")
+                                img(src="images/catalog/Star 3.png", alt="alt")
+                                img(src="images/catalog/Star 4.png", alt="alt")
+                                img(src="images/catalog/Star 4.png", alt="alt")
+                            a(href="#")
+                                img(src="images/catalog/Vector.png", alt="alt")
+                                span Забронировать
+                        .card__book
+                            img.card__book__img(src="images/catalog/while_you_were_gone.png", alt="alt")
+                            p.book__card-name Пока тебя не было
+                            p.book__card-author О`Фарелл М.
+                            .book__card-starrate
+                                img(src="images/catalog/Star 3.png", alt="alt")
+                                img(src="images/catalog/Star 3.png", alt="alt")
+                                img(src="images/catalog/Star 3.png", alt="alt")
+                                img(src="images/catalog/Star 4.png", alt="alt")
+                                img(src="images/catalog/Star 4.png", alt="alt")
+                            a(href="#")
+                                img(src="images/catalog/Vector.png", alt="alt")
+                                span Забронировать
+                        .card__book
+                            img.card__book__img(src="images/catalog/7_lives_of_M_Gorky.png", alt="alt")
+                            p.book__card-name 7 жизней М. Горького
+                            p.book__card-author Никитин Е.
+                            .book__card-starrate
+                                img(src="images/catalog/Star 3.png", alt="alt")
+                                img(src="images/catalog/Star 3.png", alt="alt")
+                                img(src="images/catalog/Star 3.png", alt="alt")
+                                img(src="images/catalog/Star 4.png", alt="alt")
+                                img(src="images/catalog/Star 4.png", alt="alt")
+                            a(href="#")
+                                img(src="images/catalog/Vector.png", alt="alt")
+                                span Забронировать
+                        .card__book
+                            img.card__book__img(src="images/catalog/a_house _with_a_light_on.png", alt="alt")
+                            p.book__card-name Дом, в котором горит свет
+                            p.book__card-author Сафарли Э.
+                            .book__card-starrate
+                                img(src="images/catalog/Star 3.png", alt="alt")
+                                img(src="images/catalog/Star 3.png", alt="alt")
+                                img(src="images/catalog/Star 3.png", alt="alt")
+                                img(src="images/catalog/Star 4.png", alt="alt")
+                                img(src="images/catalog/Star 4.png", alt="alt")
+                            a(href="#")
+                                img(src="images/catalog/Vector.png", alt="alt")
+                                span Забронировать
+                        .card__book
+                            img.card__book__img(src="images/catalog/doomed_the_winners.png", alt="alt")
+                            p.book__card-name Обреченные победители
+                            p.book__card-author Быков Д.Л.
+                            .book__card-starrate
+                                img(src="images/catalog/Star 3.png", alt="alt")
+                                img(src="images/catalog/Star 3.png", alt="alt")
+                                img(src="images/catalog/Star 3.png", alt="alt")
+                                img(src="images/catalog/Star 4.png", alt="alt")
+                                img(src="images/catalog/Star 4.png", alt="alt")
+                            a(href="#")
+                                img(src="images/catalog/Vector.png", alt="alt")
+                                span Забронировать
+                        .card__book
+                            img.card__book__img(src="images/catalog/patriot.png", alt="alt")
+                            p.book__card-name Патриот
+                            p.book__card-author Рубанов А.
+                            .book__card-starrate
+                                img(src="images/catalog/Star 3.png", alt="alt")
+                                img(src="images/catalog/Star 3.png", alt="alt")
+                                img(src="images/catalog/Star 3.png", alt="alt")
+                                img(src="images/catalog/Star 4.png", alt="alt")
+                                img(src="images/catalog/Star 4.png", alt="alt")
+                            a(href="#")
+                                img(src="images/catalog/Vector.png", alt="alt")
+                                span Забронировать
+                        .card__book
+                            img.card__book__img(src="images/catalog/Still_the_same_me.png", alt="alt")
+                            p.book__card-name Все та же я
+                            p.book__card-author Джоджо М.
+                            .book__card-starrate
+                                img(src="images/catalog/Star 3.png", alt="alt")
+                                img(src="images/catalog/Star 3.png", alt="alt")
+                                img(src="images/catalog/Star 3.png", alt="alt")
+                                img(src="images/catalog/Star 4.png", alt="alt")
+                                img(src="images/catalog/Star 4.png", alt="alt")
+                            a(href="#")
+                                img(src="images/catalog/Vector.png", alt="alt")
+                                span Забронировать
+                        .card__book
+                            img.card__book__img(src="images/catalog/teacher_dymov.png", alt="alt")
+                            p.book__card-name Учитель Дымов
+                            p.book__card-author Кузнецов С.
+                            .book__card-starrate
+                                img(src="images/catalog/Star 3.png", alt="alt")
+                                img(src="images/catalog/Star 3.png", alt="alt")
+                                img(src="images/catalog/Star 3.png", alt="alt")
+                                img(src="images/catalog/Star 4.png", alt="alt")
+                                img(src="images/catalog/Star 4.png", alt="alt")
+                            a(href="#")
+                                img(src="images/catalog/Vector.png", alt="alt")
+                                span Забронировать
+                        .card__book
+                            img.card__book__img(src="images/catalog/the_lyre_bird.png", alt="alt")
+                            p.book__card-name Птица лира
+                            p.book__card-author Ахерн С.
+                            .book__card-starrate
+                                img(src="images/catalog/Star 3.png", alt="alt")
+                                img(src="images/catalog/Star 3.png", alt="alt")
+                                img(src="images/catalog/Star 3.png", alt="alt")
+                                img(src="images/catalog/Star 4.png", alt="alt")
+                                img(src="images/catalog/Star 4.png", alt="alt")
+                            a(href="#")
+                                img(src="images/catalog/Vector.png", alt="alt")
+                                span Забронировать
+                        .card__book
+                            img.card__book__img(src="images/catalog/every_breath.png", alt="alt")
+                            p.book__card-name Каждый вдох
+                            p.book__card-author Спаркс Н.
+                            .book__card-starrate
+                                img(src="images/catalog/Star 3.png", alt="alt")
+                                img(src="images/catalog/Star 3.png", alt="alt")
+                                img(src="images/catalog/Star 3.png", alt="alt")
+                                img(src="images/catalog/Star 4.png", alt="alt")
+                                img(src="images/catalog/Star 4.png", alt="alt")
+                            a(href="#")
+                                img(src="images/catalog/Vector.png", alt="alt")
+                                span Забронировать
+                        .card__book
+                            img.card__book__img(src="images/catalog/where_does_my_happiness_live.png", alt="alt")
+                            p.book__card-name Где живет мое счастье
+                            p.book__card-author Джоджо М.
+                            .book__card-starrate
+                                img(src="images/catalog/Star 3.png", alt="alt")
+                                img(src="images/catalog/Star 3.png", alt="alt")
+                                img(src="images/catalog/Star 3.png", alt="alt")
+                                img(src="images/catalog/Star 4.png", alt="alt")
+                                img(src="images/catalog/Star 4.png", alt="alt")
+                            a(href="#")
+                                img(src="images/catalog/Vector.png", alt="alt")
+                                span Забронировать
+                        .card__book
+                            img.card__book__img(src="images/catalog/fish_of_the_flame.png", alt="alt")
+                            p.book__card-name Голомяное пламя
+                            p.book__card-author Новиков Д.
+                            .book__card-starrate
+                                img(src="images/catalog/Star 3.png", alt="alt")
+                                img(src="images/catalog/Star 3.png", alt="alt")
+                                img(src="images/catalog/Star 3.png", alt="alt")
+                                img(src="images/catalog/Star 4.png", alt="alt")
+                                img(src="images/catalog/Star 4.png", alt="alt")
+                            a(href="#")
+                                img(src="images/catalog/Vector.png", alt="alt")
+                                span Забронировать
+                        .card__book
+                            img.card__book__img(src="images/catalog/when_will_i_be_back.png", alt="alt")
+                            p.book__card-name Когда я вернусь, будь дома 
+                            p.book__card-author Сафарлин Э.
+                            .book__card-starrate
+                                img(src="images/catalog/Star 3.png", alt="alt")
+                                img(src="images/catalog/Star 3.png", alt="alt")
+                                img(src="images/catalog/Star 3.png", alt="alt")
+                                img(src="images/catalog/Star 4.png", alt="alt")
+                                img(src="images/catalog/Star 4.png", alt="alt")
+                            a(href="#")
+                                img(src="images/catalog/Vector.png", alt="alt")
+                                span Забронировать
+                        .card__book
+                            img.card__book__img(src="images/catalog/The_last_story.png", alt="alt")
+                            p.book__card-name Последние истории 
+                            p.book__card-author Токарчук О.
+                            .book__card-starrate
+                                img(src="images/catalog/Star 3.png", alt="alt")
+                                img(src="images/catalog/Star 3.png", alt="alt")
+                                img(src="images/catalog/Star 3.png", alt="alt")
+                                img(src="images/catalog/Star 4.png", alt="alt")
+                                img(src="images/catalog/Star 4.png", alt="alt")
+                            a(href="#")
+                                img(src="images/catalog/Vector.png", alt="alt")
+                                span Забронировать
+                    .pages
+                        a.more_20(href="#") Показать еще 20
+                        img.border__page(src="images/catalog/vector2.jpg", alt="")
+                        img.border__page(src="images/catalog/left_arrow.jpg", alt="")
+                        p.border__page_use 1
+                        p.border__page_2 2
+                        p.border__page_2 3
+                        p.border__page_3 ...
+            //footer   
+            include blocks/footer
+            //end footer

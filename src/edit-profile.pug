@@ -1,0 +1,86 @@
+mixin scripts(scripts)
+    each name in scripts
+        - src = 'js/' + name;
+        script(src=src)
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title профиль
+        //fonts
+        include blocks/link
+        // end fonts
+        
+    body
+        include blocks/header
+        .wrapper
+            div.container
+                div.grid_profile    
+                    div.profil_nav
+                            div
+                                div.profil_nav_text
+                                    img(src="images/profile/line-md_account.png", alt="" )
+                                    a(href="profile.html") профиль 
+                                div.profil_nav_text
+                                    img(src="images/profile/bx_bx-book-bookmark.png", alt="" )
+                                    a(href="#") Закладки        
+                                div.profil_nav_text
+                                    img(src="images/profile/bx_bxs-book.png", alt="" )
+                                    a(href="book_reservation.html") Бронь книг    
+                                div.profil_nav_text
+                                    img(src="images/profile/topcoat_like.png", alt="" )
+                                    a.as(href="#") Избранные
+                                div.profil_nav_text
+                                    img(src="images/profile/Vector (Stroke).png", alt="" )
+                                    a(href="#") Мои книги 
+                            div
+                                div.profil_nav_text_padding
+                                    img(src="images/profile/bx_bx-support.png", alt="" )
+                                    a(href="#") поддержка 
+                                div.profil_nav_text
+                                    img(src="images/profile/bx_bxs-exit.png", alt="" )
+                                    a(href="#") Выход
+                            
+                    div.profil_customization_grid1   
+                        div.profil_customization1
+                            div.profil_customization_fhoto1
+                                img(src="images/profile/codicon_account.png", alt="",height='186')
+                            div.profil_customization_name1
+                                div
+                                    h2 имя пользователя
+                                    
+                                div
+                                    a(href="#")
+                                        p сменить фотографию
+                        div.profil_customization_redac1 
+                            div
+                                div.text-name1
+                                    p.text-name-name1 имя
+                                
+                                div.text-name1
+                                    p.text-name-name1  никнейм
+                                    
+                                div.text-name1
+                                    p.text-name-name1  фамилия
+                                    
+                                div.text-name1
+                                    p.text-name-name1  о себе
+                                    a(href="profile.html")
+                                        p.otmena_form отмена
+                            div.profil_customization_redac_grid1
+                                form(action="" method="post" class='grid_form') 
+                                    input(type="text" class='input_form' placeholder="Ведите текст...")
+                                    input(type="text" class='input_form' placeholder="Ведите текст...")
+                                    input(type="text" class='input_form' placeholder="Ведите текст...") 
+                                    input(type="text" class='input_form' class='and' placeholder="Ведите текст..." )
+                                    <button class="profil_customization_button" >cохранить</button>
+                
+                            
+                            
+
+            //footer
+        include blocks/footer
+            //end footer
+        //scripts
+        +scripts(['jquery.min.js', 'owl.carousel.min.js' , 'main.js'])

@@ -1,0 +1,53 @@
+mixin scripts(scripts)
+    each name in scripts
+        - src = 'js/' + name;
+        script(src=src)
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Клубы по интересам
+        //fonts
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@900&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@700&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=Comfortaa&family=Rubik:wght@400;900&display=swap" rel="stylesheet"> 
+        //css
+        link(rel="stylesheet", href="./css/styles.min.css")
+    body
+        .wrapper
+            //header
+            include blocks/header
+            //end header
+            section.corona
+                .corona__bg
+                .container
+                    img.corona__banner(src="images/corona/banner.png", alt="alt")
+                    h1.corona__title Меры против коронавируса
+                    h3.corona__subtitle Правила безопасности при посещении МКУК-ЦБС в период пандеми
+                    p.corona__content Уважаемые читатели! В МКУК-ЦБС Ленинского района, как и по всей стране, действуют ограничения из-за СОVID-19. Напоминаем о необходимости соблюдать личную гигиену и перчаточно-масочный режим, чаще мыть руки, прикрывать нос и рот, когда кашляете или чихаете, ограничить посещение общественных мест без необходимости, избегать мест большого скопления людей.<br><br>Просим всех, а особенно людей старшего возраста, беречь себя и соблюдать требования официальных инстанций и рекомендации врачей.С 14 ноября 2020 года по 15 января 2021 года включительно приём посетителей будет осуществляться только по предварительной записи. Обслуживание осуществляется в соответствии с Временными правилами пользования МКУК-ЦБС в период действия ограничений.Актуальная информация о работе библиотеки регулярно обновляется на сайте.
+                    h2.corona__request Просим Вас:
+                    .corona__icons
+                        img(src="images/corona/icon1.png", alt="alt")
+                        img(src="images/corona/icon2.png", alt="alt")
+                        img(src="images/corona/icon3.png", alt="alt")
+                    .corona__card
+                        .corona__card-item
+                            p Запастись гигиенической маской и перчатками перед визитом в библиотеку, маску надо будет носить в библиотеке все время
+                        .corona__card-item
+                            p Соблюдать социальную дистанцию не менее 1,5—2 метров друг от друга и от наших сотрудников, обращая внимание на специальную разметку
+                        .corona__card-item
+                            p Библиотека имеет право приостановить действие читательского билета пользователя с признаками ОРВИ в помещении библиотеки 
+                        .corona__card-item
+                            p Иметь свою ручку для заполнения контрольного листка и других нужд
+                        .corona__card-item
+                            p Сообщить дежурному по читальному залу об окончании работы для проведения дезинфекции читательского места
+                        .corona__card-item
+                            p Относиться с пониманием к просьбам сотрудников соблюдать требования, связанные с ограничениями
+                    h2.corona__endtitle Соблюдение вами мер безопасности и наших правил важно для того, чтобы библиотека продолжала работать для читателей! Ждём вас!
+            //footer   
+            include blocks/footer
+            //end footer

@@ -1,0 +1,227 @@
+//banner
+.banner
+    height: 110vh
+    background-color: $bgmain;
+    color: $text
+    position: relative;
+    .banner__form-btn
+        display: none
+        transform: translateX(-60px)
+    .banner__title
+        padding-top: 84px
+        font-family: Rubik
+        font-style: normal
+        font-weight: 900
+        font-size: 129px
+        line-height: 90px
+    .banner__title span
+        font-size: 48px
+    .banner__form-title
+        font-family: Rubik
+        font-style: normal
+        font-weight: bold
+        font-size: 26px
+        line-height: 109.72%;
+        margin-top: 46px
+        margin-left: 40px
+    .banner__form-title a
+        font-family: Roboto
+        font-size: 21px
+        color: $text
+    .banner__form-title a:hover
+        text-decoration: none
+        color: $hover_orange
+    .banner__form-input
+        padding-left: 11px
+        margin-left: 40px
+        border: none;
+        width: 368px
+        height: 50px
+        font-family: Comfortaa;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 18px;
+    .banner__form-input:focus
+        outline: none
+    .banner__form-search
+        transform: translateX(-35px)
+    .banner__sofa
+        float: right;
+        transform: translateY(-28%)
+        left: 943px
+        top: 300px
+    .banner__arrow
+        height: 182px
+        width: 167px
+        margin-top: 200px
+//end banner
+
+//instruments
+.instruments__grid
+    display: grid
+    margin-bottom: 150px
+    grid-template-columns: 1fr 1fr 1fr 1fr
+    .instruments__text
+        height: 118px
+        width: 270px
+        background-color: #E1E1E1
+        display: flex
+        .instuments__text-img
+            background-color: $hover_red
+            width: 80px
+            text-align: center
+            padding-top: 40px
+            margin-left: 60px
+        .instuments__text-title
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: 900;
+            font-size: 18px;
+            line-height: 21px;
+            color: $textb
+            margin-top: 39px
+            margin-left: 18px
+    .instruments__text:hover
+        background-color: $hover_red
+        transition: 0.5s
+        p
+            color: $text
+    .instruments__wrap:hover
+        text-decoration: none
+//end instruments
+
+//new
+.new__wrap
+    position: relative
+.new__greybox
+    position: absolute
+    right: 0
+    width: 484px
+    height: 334px
+    background-color: #232323
+    z-index: -1
+.new__content
+    width: 881px
+    height: 495px
+    background-color: $bgbanner
+    display: flex
+    text-align: left
+    margin: 109px auto;
+    .new__content-text-title
+        margin-left: 60px
+        margin-top: 56px
+        width: 382px
+        font-family: Rubik;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 22px;
+        line-height: 130.19%;
+    .new__content-text-maintext
+        margin-left: 60px
+        font-family: Rubik;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 21px;
+        width: 382px
+.new__bookcard
+    display: flex
+    text-align: center
+    justify-content: space-between
+    margin-bottom: 110px
+    .new-bookcard-item
+        width: 149px
+        height: 230px
+        padding-top: 10px
+    a
+        margin-top: 10px    
+        text-decoration: none
+        color: $textb
+        font-family: Rubik;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 21px;
+        text-align: center;
+    .new-bookcard-item:hover
+        background-color: $hover_red
+        a
+            color: $text
+
+
+//end new
+
+//news
+.news__wrap
+    display: grid
+    grid-template-columns: 4fr 4fr 1fr
+    grid-gap: 50px
+    margin-top: 60px
+    margin-bottom: 80px
+    .news__third
+        display: grid
+        grid-template-columns: 1fr 1fr
+        width: 200%
+        align-items: center
+        .news__third p
+            width: 363px
+    p
+        margin-top: 33px
+        font-family: Rubik;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 17px;
+        line-height: 140%;
+        color: $textb
+    .news__title
+        writing-mode: vertical-rl
+        text-orientation: upright
+        color: $textb
+        font-size: 50px
+        margin: -20px
+        font-family: Rubik;
+        font-weight: 800;
+    .news__title-item2
+        color: #FF5C00
+        opacity: 30%
+    .news__title-item1
+        color: #FF5C00
+        opacity: 15%
+//end news
+
+//excursions
+.excursions__title
+    display: flex
+    justify-content: space-between
+    font-family: Rubik;
+    font-style: normal;
+    font-size: 55px;
+    line-height: 65px;
+    color: $textb
+    h2
+        font-weight: 700
+.excursions__banner
+    display: flex
+    margin: 40px 0px 70px 0px
+    .excursions__banner-text
+        background-color: $bgbanner
+        width: 459px
+        height: 409px
+        h3
+            padding: 30px 30px 0px 30px
+            font-family: Rubik;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 25px;
+            line-height: 132.5%;
+            color: $textb
+        p
+            padding: 20px 30px 30px 30px
+            color: $textb
+            font-family: Rubik;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 17px;
+            line-height: 140%;
+//end excursions

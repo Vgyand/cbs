@@ -1,0 +1,115 @@
+mixin scripts(scripts)
+    each name in scripts
+        - src = 'js/' + name;
+        script(src=src)
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title профиль
+        //fonts
+        include blocks/link
+        // end fonts
+        
+    body
+        include blocks/header
+        .wrapper
+            div.container
+                div.grid_profile    
+                    div.profil_nav
+                            div
+                                div.profil_nav_text
+                                    img(src="images/profile/line-md_account.png", alt="" )
+                                    a(href="profile.html") профиль 
+                                div.profil_nav_text
+                                    img(src="images/profile/bx_bx-book-bookmark.png", alt="" )
+                                    a(href="#") Закладки        
+                                div.profil_nav_text
+                                    img(src="images/profile/bx_bxs-book.png", alt="" )
+                                    a(href="book_reservation.html") Бронь книг    
+                                div.profil_nav_text
+                                    img(src="images/profile/topcoat_like.png", alt="" )
+                                    a.as(href="#") Избранные
+                                div.profil_nav_text
+                                    img(src="images/profile/Vector (Stroke).png", alt="" )
+                                    a(href="#") Мои книги 
+                            div
+                                div.profil_nav_text_padding
+                                    img(src="images/profile/bx_bx-support.png", alt="" )
+                                    a(href="#") поддержка 
+                                div.profil_nav_text
+                                    img(src="images/profile/bx_bxs-exit.png", alt="" )
+                                    a(href="#") Выход
+                            
+                    div.profil_customization_grid       
+                        div.profil_customization
+                            div.profil_customization_fhoto
+                                img(src="images/profile/codicon_account.png", alt="",height='186')
+                            div.profil_customization_name
+                                div
+                                    h2 имя пользователя
+                                    a(href="edit-profile.html")
+                                        p редактировать профиль
+                                div
+                                    a(href="#")
+                                        p сменить фотографию
+                        div.profil_customization_redac 
+                            div.text-name
+                                p.text-name-name имя
+                                p имя
+                            div.text-name
+                                p.text-name-name  никнейм
+                                p никнейм
+                            div.text-name
+                                p.text-name-name  фамилия
+                                p Фамилия
+                            div.text-name
+                                p.text-name-name  о себе
+                                p о себе
+                div.favorite_genres       
+                        div
+                            
+                            
+                        div.favorite_genres_js
+                            p Любимые жанры +
+                            div.favorite_genres_janr
+                                p.text-janr комедия <span class='favorite_genres_js_x' >  x  </span>
+                div.read_books
+                    div.read_books_text
+                        h3 Прочитаные книги
+                        p количество прочитаных кник 6
+                    div.read_books_nomer
+                        div.read_books_nomer1
+                            div
+                                img(src="images/profile/Group 280.png", alt="")
+                            div
+                                h3 Евгений Онегин
+                                p.read-text-sarch Знаменитый роман в стихах «Евгений Онегин» — «энциклопедия русской жизни» и вечная история любви — одно из самых значительных произведений русской словесности. 
+                                p.margin-text-read А. С. Пушкин
+                        div.read_books_nomer1
+                            div
+                                img(src="images/profile/Group 280.png", alt="")
+                            div
+                                h3 Евгений Онегин
+                                p.read-text-sarch  Знаменитый роман в стихах «Евгений Онегин» — «энциклопедия русской жизни» и вечная история любви — одно из самых значительных произведений русской словесности. 
+                                p.margin-text-read А. С. Пушкин
+                        div.read_books_nomer1
+                            div
+                                img(src="images/profile/Group 280.png", alt="")
+                            div
+                                h3 Евгений Онегин
+                                p.read-text-sarch  Знаменитый роман в стихах «Евгений Онегин» — «энциклопедия русской жизни» и вечная история любви — одно из самых значительных произведений русской словесности. 
+                                p.margin-text-read А. С. Пушкин
+                        div.read_books_nomer1
+                            div
+                                img(src="images/profile/Group 280.png", alt="")
+                            div
+                                h3 Евгений Онегин
+                                p.read-text-sarch  Знаменитый роман в стихах «Евгений Онегин» — «энциклопедия русской жизни» и вечная история любви — одно из самых значительных произведений русской словесности. 
+                                p.margin-text-read А. С. Пушкин
+            //footer
+        include blocks/footer
+            //end footer
+        //scripts
+        +scripts(['jquery.min.js', 'owl.carousel.min.js' , 'main.js'])

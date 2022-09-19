@@ -1,0 +1,71 @@
+/* common styles */
+* 
+    box-sizing: border-box;
+*:before,
+*:after 
+    box-sizing: border-box;
+a 
+    color: $hover_red
+    transition: all 0.2s linear;
+    
+
+.header
+    background-color: $bgmain
+    height: 108px
+    .header__wrap
+        display: flex
+        align-items: center
+        padding-top: 30px
+        .header__nav
+            display: flex
+            margin-top: 20px
+            .header__nav-item
+                margin-left: 33px
+                font-family: Comfortaa;
+                font-style: normal;
+                font-weight: regular;
+                font-size: 16px;
+                line-height: 18px;
+                text-align: center;
+                text-transform: uppercase;
+                position: relative
+                .header__nav-item-submenu
+                    position: absolute
+                    display: none
+                    width: 300px
+                    height: 200px
+                    z-index: 10
+                    padding-top: 5px
+                    left: -40px
+                    text-align: left
+                    font-size: 14px
+                    li
+                        margin-top: 10px
+                        text-decoration: none
+                        list-style: none
+            .header__nav-item-sob:hover > .header__nav-item-submenu
+                display: block
+                transition: 0.2s
+            .header__nav-item a
+                color: $text;
+                text-decoration: none
+            .header__nav-item a:hover
+                color: $hover_orange
+        .header__icons a
+            color: $hover_orange
+            text-decoration: none
+            font-family: Rubik;
+            font-style: normal;
+            font-weight: 1000;
+            font-size: 16px;
+            line-height: 19px;
+        .header__icons a:hover
+            color: $hover_red
+        .header__search-icon
+            margin-right: 30px
+            margin-left: 76px
+            color: $hover_red
+        .header__account-icon
+            margin-right: 5px
+
+

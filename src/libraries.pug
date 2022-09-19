@@ -1,0 +1,95 @@
+mixin scripts(scripts)
+    each name in scripts
+        - src = 'js/' + name;
+        script(src=src)
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Библиотеки
+        //fonts
+        include blocks/link
+        // end fonts
+    body
+        .wrapper
+            //header
+            include blocks/header
+            //end header
+
+            // banner
+            section.banner__libraries
+                .container.banner__libraries-wrap
+                    p.libraries__banner__title Лучший подарок для <br> библиотеки, конечно, книга
+                    p.banner__form-title    Найти книгу <br><a href="#"><span>В КАТАЛОГЕ</span></a>
+                    form(action="#" method="post")
+                        input.banner__form-input(type="text" placeholder="Расширенный поиск...")
+                        <a href="#">
+                            img.banner__form-search(src="images/mainpage/banner/search.png", alt="alt")
+                        </a>
+                    img.banner__libraries__img(src="images/libraries/banner__libraries.png", alt="") 
+            // end banner
+
+            // content__libraries
+            section.content__libraries
+                .container
+                    p.content__title__libraries Поэтому в библиотеках Ленинского района в 2020 году продолжается акция «Подари библиотеке книгу». Если у вас дома есть прочитанные книги <br> в хорошем состоянии – Вы можете подарить их библиотеке.
+                    .description__libraries
+                        .main__text__libraries
+                            p.description__text Библиотека с благодарностью примет литературу. И книга еще раз сможет порадовать нового читателя. Акция направлена на то, чтобы пополнить фонд необходимой литературой для любителей чтения. Те, кто передает бесплатно книги в фонд библиотеки, — люди с активной гражданской позицией, чувством долга перед обществом, как правило, прекрасно понимающие, что эти книги найдут своего читателя. Все подаренные книги будут поставлены на учет, а в библиотеке пройдут выставки подаренной литературы.
+                            p.description__text__bottom Ваши книги будут рады принять в любой из 13-ти библиотек ЦБС Ленинского района.
+                        img(src="images/libraries/arrow.svg", alt="")
+                    .list__libraries
+                        .card__library__pink
+                            p.library__title Филиал им. Ф. Э. Дзержинского
+                            p.library__info ул. Гл. Успенского, 4/4 <br> пн-пт с 11:00 до 19:00 <br> вс с  11:00 до 19:00
+                            p.library__contacts 258 - 28 - 00 <br> dzerjins-bib@yandex.ru
+                        .card__library__pink
+                            p.library__title Филиал им. С. Я. Маршака
+                            p.library__info ул. Адмирала Макарова,6 <br>пн-пт с 11:00 до 17:00 <br>сб с  11:00 до 17:00
+                            p.library__contacts 251 - 82 - 11 <br> marshakblok@yandex.ru
+                        .card__library__blue
+                            p.library__title Филиал им. М. И. Цветаевой
+                            p.library__info пр. Ленина, д.58 <br>пн-пт с 11:00 до 18:00 <br>сб с  11:00 до 18:00
+                            p.library__contacts 250 - 40 - 16 <br> svetaevaf@yandex.ru
+                        .card__library__blue
+                            p.library__title ЦДБ им. А. В. Кольцова
+                            p.library__info ул. Премудрова, 10 <br> пн-пт с 11:00 до 18:00 <br>сб с  11:00 до 18:00
+                            p.library__contacts 244 - 28 - 32 <br>kolcov-bibl@yandex.ru
+                        .card__library__pink
+                            p.library__title Филиал им. А. А. Ахматовой
+                            p.library__info пр. Ленина, 91 <br>пн-пт с 11:00 до 19:00 <br>вс с  11:00 до 19:00
+                            p.library__contacts 244 - 94 - 82 <br>ahmatovabib@yandex.ru
+                        .card__library__pink
+                            p.library__title БИДЦ им. К. Г. Паустовского
+                            p.library__info ул. Грекова, 9 <br>пн-пт с 11:00 до 18:00 <br>вс с  11:00 до 18:00
+                            p.library__contacts 258 - 40 - 78 <br>paustovsk@yandex.ru
+                        .card__library__blue
+                            p.library__title Филиал им. Н. А. Некрасова
+                            p.library__info ул. Каховская, 1 <br>пн-пт с 11:00 до 17:00 <br>вс с  11:00 до 17:00
+                            p.library__contacts 250 - 47 - 47 <br>anutade@rambler.ru
+                        .card__library__blue
+                            p.library__title Филиал им. М. М. Пришвина
+                            p.library__info ул. Гл. Успенского, 17 <br>пн-пт с 11:00 до 17:00 <br>вс с  11:00 до 17:00
+                            p.library__contacts 258 - 10 - 60 <br>p17mm@yandex.ru
+                        .card__library__pink
+                            p.library__title ЦБ им. Д. А. Фурманова
+                            p.library__info пр. Ленина, 14 <br>пн-пт с 11:00 до 19:00 <br>вс с  11:00 до 19:00
+                            p.library__contacts 245 - 31 - 84 <br>bibliotekaf@yandex.ru
+                        .card__library__pink
+                            p.library__title Краеведческий центр им. П. П. Бажова
+                            p.library__info ул. Кировская, 16 <br>пн-пт с 11:00 до 18:00 <br>сб с  11:00 до 18:00
+                            p.library__contacts 244 - 16 - 05 <br>bajovabibl@yandex.ru
+                        .card__library__blue
+                            p.library__title Филиал им. А. А. Блока
+                            p.library__info ул. Адмирала Макарова, 6 <br>пн-пт с 11:00 до 18:00 <br>сб с  11:00 до 18:00
+                            p.library__contacts 251 - 80 - 13 <br>marshakblok@yandex.ru
+                        .card__library__blue
+                            p.library__title Филиал им. В. М. Комарова
+                            p.library__info ул. Снежная, 25/4 <br>пн-пт с 11:00 до 17:00 <br>вс с  11:00 до 17:00
+                            p.library__contacts 244 - 07 - 87 <br>komarovabib@yandex.ru
+                    .rectangle__1 
+                    .rectangle__2
+            //footer
+            include blocks/footer
+            //end footer

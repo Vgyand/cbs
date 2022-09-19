@@ -1,0 +1,91 @@
+mixin scripts(scripts)
+    each name in scripts
+        - src = 'js/' + name;
+        script(src=src)
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Клубы по интересам
+        //fonts
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@900&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@700&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=Comfortaa&family=Rubik:wght@400;900&display=swap" rel="stylesheet"> 
+        //css
+        link(rel="stylesheet", href="./css/styles.min.css")
+    body
+        .wrapper
+            //header
+            include blocks/header
+            //end header
+            section.banner.bannerticket
+                .container.banner-wrap
+                    h1.banner_title Молодежный совет<br>«НИКА»
+                    .banner__form
+                        h2.banner__form-title Найти книгу
+                        a.banner__form-nav(href="#") В КАТАЛОГЕ
+                        form(action="#" method="post")
+                        input.banner__form-input(type="text" placeholder="Расширенный поиск...")
+                        <a href="#">
+                            img.banner__form-search(src="images/mainpage/banner/search.png", alt="alt")
+                        </a>
+                        button.btn.btn-primary.banner__form-btn(type='submit')
+            //team
+            section.team
+                .container
+                    h2.team__title Объединение молодых библиотекарей
+                    .team__banner
+                        img(src="images/nika/item1.png", alt="alt")
+                        p.team__banner-text Профессиональное объединение молодых библиотекарей МКУК ЦБС Ленинского района - Молодежный Совет «НИКА» создан в мае 2011 года по инициативе молодых библиотекарей нашей системы.<br><br>Совет молодых библиотекарей  «НИКА» принимает активное участие в организации и проведении городских и  районных мероприятий, акциях, фестивалях, конкурсах.  Большое внимание уделяется организации спортивных и  развлекательных мероприятий для молодых специалистов.
+                        .team__main
+                            .team__member
+                                img(src="images/nika/member__photo.png", alt="alt")
+                                .team__member-text
+                                    h3 Белова<br>Ксения
+                                    p Библиотекарь 
+                            .team__member
+                                img(src="images/nika/member__photo.png", alt="alt")
+                                .team__member-text
+                                    h3 Загребалова<br>Вероника
+                                    p Библиотекарь
+                    .team__members
+                        .team__member.team__member-none
+                                img(src="images/nika/member__photo.png", alt="alt")
+                                .team__member-text
+                                    h3 Тихонова<br>Ольга
+                                    p Библиотекарь
+                        .team__member.team__member-none
+                                img(src="images/nika/member__photo.png", alt="alt")
+                                .team__member-text
+                                    h3 Конькова<br>Екатерина
+                                    p Библиотекарь 
+                        .team__member.team__member-none
+                                img(src="images/nika/member__photo.png", alt="alt")
+                                .team__member-text
+                                    h3 Точилина<br>Юлия 
+                                    p Библиотекарь 
+                        .team__member
+                                img(src="images/nika/member__photo.png", alt="alt")
+                                .team__member-text
+                                    h3 Агеева<br>Ольга 
+                                    p Библиотекарь 
+                    .team__event
+                        .team__event-text
+                            h3 8 июля в парке Станкозавода прошел традиционный районный праздник, посвященный Дню семьи, любви и верности
+                            p В рамках мероприятия состоялось награждение участников фестиваля цветников «Цветами рисуем счастье» в рамках проекта «Крепкая семья», организованного...
+                            button.team__event-btn Подробнее
+                        img(src="images/nika/even1.png", alt="alt")
+                    .team__event
+                        img(src="images/nika/even1.png", alt="alt")
+                        .team__event-text
+                            h3 С 16 по 19 мая 2019 года прошел молодежный образовательный форум Нижегородской области «МолодежНО»
+                            p Форум прошел на базе загородного центра «Дзержинец» (Нижегородская область, Кстовский район, с. Кадницы).Лидер молодежного объединения...
+                            button.team__event-btn Подробнее
+            //team end
+            //footer   
+            include blocks/footer
+            //end footer

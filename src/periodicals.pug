@@ -1,0 +1,145 @@
+mixin scripts(scripts)
+    each name in scripts
+        - src = 'js/' + name;
+        script(src=src)
+
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Периодические издания
+        //fonts
+        include blocks/link
+        // end fonts
+    body
+        .wrapper
+            //header 
+            include blocks/header
+            // end header
+
+            // banner
+            section.banner__periodicals
+                .container 
+                    p.periodicals__banner__title Периодические издания
+                    p.banner__form-title    Найти книгу <br><a href="#"><span>В КАТАЛОГЕ</span></a>
+                    form(action="#" method="post")
+                        input.banner__form-input(type="text" placeholder="Расширенный поиск...")
+                        <a href="#">
+                            img.banner__form-search(src="images/mainpage/banner/search.png", alt="alt")
+                        </a>
+                    // Фотку почему-то не видно
+                    img.banner__periodicals__img(src="images/periodicals/banner.png", alt="")
+            // end banner
+
+            //content__periodicals
+            section.content__periodicals
+                .container
+                    p.text__periodicals Предлагаем вашему вниманию сводный каталог периодических изданий. В каталог включены газеты и журналы, выписываемые библиотеками МКУК ЦБС Ленинского района. Список журналов и газет расположен в алфавитном порядке изданий, указаны сиглы библиотек.
+                    .blocks__periodicals 
+                        .publication__block
+                            p.year__publication 2020
+                            .line__red
+                            .edition__publication
+                                .first__halfyear
+                                    p.title__publication Первое полугодие
+                                    button.publication__button Читать
+                                .second__halfyear
+                                    p.title__publication Второе полугодие
+                                    button.publication__button Читать
+                        .publication__block
+                            p.year__publication 2019
+                            .line__red
+                            .edition__publication
+                                .first__halfyear
+                                    p.title__publication Первое полугодие
+                                    button.publication__button Читать
+                                .second__halfyear
+                                    p.title__publication Второе полугодие
+                                    button.publication__button Читать
+                        .publication__block
+                            p.year__publication 2018
+                            .line__red
+                            .edition__publication
+                                .first__halfyear
+                                    p.title__publication Первое полугодие
+                                    button.publication__button Читать
+                                .second__halfyear
+                                    p.title__publication Второе полугодие
+                                    button.publication__button Читать
+                        .publication__block
+                            p.year__publication 2017
+                            .line__red
+                            .edition__publication
+                                .first__halfyear
+                                    p.title__publication Первое полугодие
+                                    button.publication__button Читать
+                                .second__halfyear
+                                    p.title__publication Второе полугодие
+                                    button.publication__button Читать
+                        .publication__block
+                            p.year__publication 2016
+                            .line__red
+                            .edition__publication
+                                .first__halfyear
+                                    p.title__publication Первое полугодие
+                                    button.publication__button Читать
+                                .second__halfyear
+                                    p.title__publication Второе полугодие
+                                    button.publication__button Читать
+                        .publication__block
+                            p.year__publication 2015
+                            .line__red
+                            .edition__publication
+                                .first__halfyear
+                                    p.title__publication Первое полугодие
+                                    button.publication__button Читать
+                                .second__halfyear
+                                    p.title__publication Второе полугодие
+                                    button.publication__button Читать
+                        .publication__block
+                            p.year__publication 2014
+                            .line__red
+                            .edition__publication
+                                .first__halfyear
+                                    p.title__publication Первое полугодие
+                                    button.publication__button Читать
+                                .second__halfyear
+                                    p.title__publication Второе полугодие
+                                    button.publication__button Читать
+                        .publication__block
+                            p.year__publication 2013
+                            .line__red
+                            .edition__publication
+                                .first__halfyear
+                                    p.title__publication Первое полугодие
+                                    button.publication__button Читать
+                                .second__halfyear
+                                    p.title__publication Второе полугодие
+                                    button.publication__button Читать
+                        .publication__block
+                            p.year__publication 2012
+                            .line__red
+                            .edition__publication
+                                .first__halfyear
+                                    p.title__publication Первое полугодие
+                                    button.publication__button Читать
+                                .second__halfyear
+                                    p.title__publication Второе полугодие
+                                    button.publication__button Читать
+                        .publication__block
+                            p.year__publication 2011
+                            .line__red
+                            .edition__publication
+                                .first__halfyear
+                                    p.title__publication Первое полугодие
+                                    button.publication__button Читать
+                                .second__halfyear
+                                    p.title__publication Второе полугодие
+                                    button.publication__button Читать
+            // end content__periodicals 
+
+
+            //footer
+            include blocks/footer
+            //end footer
